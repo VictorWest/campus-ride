@@ -1,0 +1,37 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id       Int       @id @default(autoincrement())
+  name     String
+  email    String    @unique
+  password String
+  bookings Booking[]
+}
+
+model Ride {
+  id             Int       @id @default(autoincrement())
+  busCode        String
+  origin         String
+  destination    String
+  departureTime  String // kept as a simple string for now — real date/time handling is a future lesson
+  totalSeats     Int
+  bookings       Booking[]
+}
+
+// Booking is created here (Thursday) but no routes use it yet.
+// Friday's lesson adds POST /bookings and GET /bookings/me on top of this same model.
+model Booking {
+  id         Int      @id @default(autoincrement())
+  seatNumber String
+  createdAt  DateTime @default(now())
+  userId     Int
+  rideId     Int
+  user       User     @relation(fields: [userId], references: [id])
+  ride       Ride     @relation(fields: [rideId], references: [id])
+}
