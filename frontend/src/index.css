@@ -64,3 +64,155 @@ body {
   border-radius: 8px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
+
+/* --- Added Friday: app shell + protected page styles --- */
+
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 220px;
+  background: white;
+  border-right: 1px solid #e5e7eb;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-brand {
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 24px;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.nav-link {
+  padding: 10px 12px;
+  border-radius: 6px;
+  color: #374151;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.nav-link.active {
+  background: #16a34a;
+  color: white;
+}
+
+.sign-out {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: #dc2626;
+  cursor: pointer;
+  text-align: left;
+  font-size: 14px;
+}
+
+.content {
+  flex: 1;
+  padding: 32px 40px;
+}
+
+.content h1 {
+  margin-top: 0;
+  font-size: 22px;
+}
+
+.content .subtitle {
+  color: #6b7280;
+  margin-top: -8px;
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+.summary-cards {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.summary-card {
+  background: white;
+  border-radius: 8px;
+  padding: 16px 20px;
+  flex: 1;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.summary-label {
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.summary-value {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.trip-card,
+.ride-card {
+  background: white;
+  border-radius: 8px;
+  padding: 16px 20px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  margin-bottom: 12px;
+}
+
+.trip-code {
+  display: inline-block;
+  background: #f3f4f6;
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.trip-route {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.trip-meta {
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.ride-card button,
+.book-form button {
+  margin-top: 12px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #16a34a;
+  color: white;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.book-form {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.book-form input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 13px;
+}
