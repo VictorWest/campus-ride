@@ -97,3 +97,4 @@ Thursday. Stop here for the day.
 - **`GET /rides` returns an empty array:** the seed script wasn't run, or was run
   against a different database than the one the server is connected to — double-check
   `DATABASE_URL` in `.env`.
+boma was here
